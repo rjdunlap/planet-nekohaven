@@ -26,13 +26,13 @@ function MapGen_Nekohaven()
         ["decorative:green-hairy-grass:probability"] = "gleba_green_hairy_grass_probability"
     }
     map_gen_setting.autoplace_controls = {
-        ["scrap"] = {},
+        ["scrap"] = {frequency = 0.75, size = 0.75, richness = 0.25},
         ["gleba_plants"] = { frequency = 4.5, size = 2, richness = 1},
-        ["gleba_enemy_base"] = { frequency = 3, size = 2, richness = 1},
+        ["gleba_enemy_base"] = { frequency = 1, size = 1, richness = 1},
         ["gleba_water"] = {frequency = 0.4, size = 0.5, richness = 0.5},
         ["gleba_cliff"] = {},
         ["trees"] = { frequency = 4.5, size = 2, richness = 1 },
-        ["enemy-base"] = { frequency = 3, size = 2, richness = 1},
+        ["enemy-base"] = { frequency = 3, size = 1.2, richness = 1},
     }
 
     map_gen_setting.autoplace_settings["tile"] =
