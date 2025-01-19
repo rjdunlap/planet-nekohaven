@@ -551,8 +551,8 @@ nekohaven.orbit = {
         type = "space-location",
         name = "star",
     },
-    distance = 40,
-    orientation = 0.24
+    distance = 20,
+    orientation = 0.175
 }
 
 PlanetsLib:extend({nekohaven})
