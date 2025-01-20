@@ -189,6 +189,7 @@ function MapGen_Nekohaven()
             ["fulgoran-ruin-medium"] = { frequency = 2, size = 2, richness = 2},
             ["fulgoran-ruin-small"] = { frequency = 2, size = 2, richness = 2},
             ["fulgurite"] = {},
+            ["fish"] = {},
         }
     }
      
@@ -561,7 +562,7 @@ data:extend {{
     type = "technology",
     name = "planet-discovery-nekohaven",
     icons = util.technology_icon_constant_planet("__planet-nekohaven__/graphics/planet-nekohaven.png"),
-    icon_size = 256,
+    icon_size = 512,
     essential = true,
     localised_description = {"space-location-description.nekohaven"},
     effects = {
