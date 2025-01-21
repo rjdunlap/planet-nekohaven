@@ -570,6 +570,14 @@ data:extend {{
             type = "unlock-space-location",
             space_location = "nekohaven",
             use_icon_overlay_constant = true
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "lightning-rod",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "lube-cracking",
         }
     },
     prerequisites = {
@@ -588,5 +596,36 @@ data:extend {{
     order = "ea[nekohaven]",
 }}
 
+local seconds = 60
+local minutes = 60*seconds
+
+data:extend({{
+  type = "recipe",
+  name = "lube-cracking",
+  category = "chemistry",
+  enabled = false,
+  energy_required = 1,
+  ingredients =
+  {
+    {type = "fluid", name="lubricant", amount = 20},
+    {type = "item", name = "solid-fuel", amount = 1},
+    {type = "item", name = "ice", amount = 1}
+  },
+  results =
+  {
+    {type = "fluid", name="crude-oil", amount = 25}
+  },
+  allow_productivity = true,
+  main_product = "",
+  icon = "__base__/graphics/icons/fluid/basic-oil-processing.png",
+  subgroup = "fluid-recipes",
+  order = "b[fluid-chemistry]-a[lube-cracking]",
+  crafting_machine_tint = {
+    primary = {r = 1.000, g = 0.642, b = 0.261, a = 1.000}, -- #ffa342ff
+    secondary = {r = 1.000, g = 0.722, b = 0.376, a = 1.000}, -- #ffb85fff
+    tertiary = {r = 0.854, g = 0.659, b = 0.576, a = 1.000}, -- #d9a892ff
+    quaternary = {r = 1.000, g = 0.494, b = 0.271, a = 1.000}, -- #ff7e45ff
+  }
+}})
 
 APS.add_planet{name = "nekohaven", filename = "__planet-nekohaven__/nekohaven.lua", technology = "planet-discovery-nekohaven"}
