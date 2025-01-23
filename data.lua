@@ -557,6 +557,8 @@ nekohaven.orbit = {
 }
 
 PlanetsLib:extend({nekohaven})
+PlanetsLib.borrow_music(data.raw["planet"]["gleba"], nekohaven)
+
 
 data:extend {{
     type = "technology",
