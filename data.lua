@@ -552,13 +552,23 @@ nekohaven.orbit = {
         type = "space-location",
         name = "star",
     },
-    distance = 20,
-    orientation = 0.175
+    distance = 22,
+    orientation = 0.15
 }
 
 PlanetsLib:extend({nekohaven})
 PlanetsLib.borrow_music(data.raw["planet"]["gleba"], nekohaven)
 
+local nekohaven_connection = {
+  type = "space-connection",
+  name = "gleba-nekohaven",
+  from = "gleba",
+  to = "nekohaven",
+  subgroup = data.raw["space-connection"]["nauvis-vulcanus"].subgroup,
+  length = 15000,
+  asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus),
+}
+data:extend{nekohaven_connection}
 
 data:extend {{
     type = "technology",
