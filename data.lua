@@ -573,7 +573,7 @@ data:extend{nekohaven_connection}
 data:extend {{
     type = "technology",
     name = "planet-discovery-nekohaven",
-    icons = util.technology_icon_constant_planet("__planet-nekohaven__/graphics/planet-nekohaven.png"),
+    icons = PlanetsLib.technology_icon_constant_planet("__planet-nekohaven__/graphics/planet-nekohaven.png", 512),
     icon_size = 512,
     essential = true,
     localised_description = {"space-location-description.nekohaven"},
