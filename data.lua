@@ -231,6 +231,7 @@ local nekohaven =
     starmap_icon = "__planet-nekohaven__/graphics/planet-nekohaven.png",
     starmap_icon_size = 512,
     magnitude = nauvis.magnitude,
+    subgroup = "planets",
     surface_properties = {
         ["solar-power"] = 50,
         ["pressure"] = 2000,
