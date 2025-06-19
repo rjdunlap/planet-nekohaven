@@ -139,8 +139,6 @@ function MapGen_Nekohaven()
           ["barnacles-decal"] = {},
           ["coral-stunted"] = {},
           ["coral-stunted-grey"] = {},
-          ["nerve-roots-veins-dense"] = {},
-          ["nerve-roots-veins-sparse"] = {},
           ["yellow-coral"] = {},
           ["solo-barnacle"] = {},
           ["curly-roots-orange"] = {},
