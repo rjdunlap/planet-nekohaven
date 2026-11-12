@@ -91,7 +91,8 @@ function MapGen_Nekohaven()
           ["green-small-grass"] = {},
           ["green-asterisk"] = {},
           ["fulgoran-ruin-tiny"] = {},
-          ["fulgoran-gravewort"] = {},
+          ["small-fulgoran-gravewort"] = {},
+          ["medium-fulgoran-gravewort"] = {},
           ["urchin-cactus"] = {},
           ["medium-fulgora-rock"] = {},
           ["small-fulgora-rock"] = {},
@@ -613,7 +614,7 @@ local minutes = 60*seconds
 data:extend({{
   type = "recipe",
   name = "lube-cracking",
-  category = "chemistry",
+  categories = {"chemistry"},
   enabled = false,
   energy_required = 1,
   ingredients =

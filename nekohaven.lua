@@ -4,5 +4,5 @@ utils.set_prerequisites("recycling", nil)
 utils.set_prerequisites("agriculture", nil)
 utils.set_prerequisites("heating-tower", nil)
 
-utils.set_trigger("agriculture", {type = "mine-entity", entity = "stingfrond"})
-utils.set_trigger("heating-tower", {type = "mine-entity", entity = "sunnycomb"})
+utils.set_trigger("agriculture", {type = "mine-entity", entities = {"stingfrond"}})
+utils.set_trigger("heating-tower", {type = "mine-entity", entities = {"sunnycomb"}})
