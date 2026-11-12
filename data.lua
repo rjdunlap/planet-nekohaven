@@ -3,7 +3,6 @@ local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-de
 local planet_catalogue_gleba = require("__space-age__.prototypes.planet.procession-catalogue-gleba")
 local effects = require("__core__.lualib.surface-render-parameter-effects")
 
-require("nekohaven")
 
 --START MAP GEN
 function MapGen_Nekohaven()
@@ -614,6 +613,12 @@ local minutes = 60*seconds
 data:extend({{
   type = "recipe",
   name = "lube-cracking",
+-- Only craftable on its own planet (it was usable on other planets with the same pressure, which is overpowered).
+  surface_conditions =
+  {
+    {property = "solar-power", min = 50, max = 50},
+    {property = "magnetic-field", min = 99, max = 99},
+  },
   categories = {"chemistry"},
   enabled = false,
   energy_required = 1,
@@ -640,4 +645,7 @@ data:extend({{
   }
 }})
 
-APS.add_planet{name = "nekohaven", filename = "__planet-nekohaven__/nekohaven.lua", technology = "planet-discovery-nekohaven"}
+-- Any Planet Start is optional.
+if mods["any-planet-start"] then
+    APS.add_planet{name = "nekohaven", filename = "__planet-nekohaven__/nekohaven.lua", technology = "planet-discovery-nekohaven"}
+end
